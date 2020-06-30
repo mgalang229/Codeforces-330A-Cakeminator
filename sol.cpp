@@ -4,8 +4,8 @@ using namespace std;
 
 void solve() {
 	int r, c, row[10] = {0}, col[10] = {0};
-	string s;
 	cin >> r >> c;
+	string s;
 	for(int i = 0; i < r; i++){
 		cin >> s;
 		for(int j = 0; j < c; j++){
@@ -15,15 +15,15 @@ void solve() {
 			}
 		}
 	}
-	int ans = 0;
+	int cnt = 0;
 	for(int i = 0; i < r; i++){
 		for(int j = 0; j < c; j++){
 			if(row[i] == 0 || col[j] == 0){
-				ans += 1;
+				cnt++;
 			}
 		}
 	}
-	cout << ans << "\n";
+	cout << cnt << "\n";
 }
 
 int main() {
